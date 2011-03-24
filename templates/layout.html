@@ -1,0 +1,28 @@
+$def with(content,title=None)
+<!DOCTYPE html>
+<head>
+  <script type="text/javascript" src="static/js/jquery-1.4.2.min.js"></script>
+  <link href="static/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="static/css/print.css" rel="stylesheet" type="text/css" media="print"/>
+  <title>
+    $if title: $title
+  </title>
+</head>
+<html>
+  <body>
+    <div id="header">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/marks">Marks</a>
+        <a href="/upload">Upload</a>
+        <a href="/reports">Reports</a>
+        <a href="/stu">Students</a>
+        <a href="/login">Login</a>
+      </nav>
+    </div>
+    $:content
+  </body>
+<div id="footer">
+  Footer Section
+</div>
+</html>

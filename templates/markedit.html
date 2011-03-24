@@ -1,0 +1,29 @@
+$def with (mark,active)
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+  var a = "f_"+"$active";
+  jQuery("#markeditform input").each(function(i,j){
+    var c = jQuery(j).attr('class');
+    if(c == a){
+      jQuery(j).attr('disabled',0);
+      return false;
+    }
+   });
+  });
+</script>
+<div id="markeditpanel" class="lpanel">
+  <div class="panelheader">Edit</div>
+  <b>$mark.name</b><br/>
+  <b>$mark.year - $mark.std - $mark.section </b><br/>
+  <form id="markeditform" action="markedit" method="POST">
+    <input type="hidden" name="markid" value="$mark.id"/>
+    <b>FA1: </b><input class="f_fa1_m" type="text" disabled = "1" name="fa1_m" value="$mark.fa1_m" size="10"/>/$mark.fa1_o<br/>
+    <b>FA2: </b><input class="f_fa2_m" type="text" disabled = "1" name="fa2_m" value="$mark.fa2_m" size="10"/>/$mark.fa2_o<br/>
+    <b>SA1: </b><input class="f_sa1_m" type="text" disabled = "1" name="sa1_m" value="$mark.sa1_m" size="10"/>/$mark.sa1_o<br/>
+    <b>FA3: </b><input class="f_fa3_m" type="text" disabled = "1" name="fa3_m" value="$mark.fa3_m" size="10"/>/$mark.fa3_o<br/>
+    <b>FA4: </b><input class="f_fa4_m" type="text" disabled = "1" name="fa4_m" value="$mark.fa4_m" size="10"/>/$mark.fa4_o<br/>
+    <b>SA2: </b><input class="f_sa2_m" type="text" disabled = "1" name="sa2_m" value="$mark.sa2_m" size="10"/>/$mark.sa2_o<br/>
+    <input type="submit" name="submit" value="Submit"/>
+    <a href="#nogo" id="closeeditform">Close</a>
+  </form>
+</div>

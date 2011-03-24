@@ -1,0 +1,97 @@
+body,html{  
+    margin:0;
+    padding:0;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif
+}
+a{
+    text-decoration:none;
+    color: #3B5998;
+}
+a:hover{
+    text-decoration:underline;
+}
+#header a:hover{
+    text-decoration:none;
+}
+ul{padding:0px;}
+ul li{list-style:none;}
+#header{
+    width:100%;
+    background-color: #3b5998;
+    font-weight: bold;
+}
+#header a{
+    color: #FFF;
+    padding-left:10px;
+}
+nav{
+    width:100%;
+    }
+h2{
+   margin-top: 1px;
+   margin-bottom: 1px;
+   text-align:center;
+}
+#sidebar{
+    float:left;
+    width:185px;
+}
+#sep{
+    float:left;
+    width:1px;
+    background-color:#ccc;
+    min-height:500px;
+    padding-right: 2px;
+    padding-left:2px;
+}
+#main {
+    float:left;
+    min-width:700px;
+    min-height:500px;
+    border-left:3px solid #ccc;
+}
+#footer{
+    clear:both;
+    width:100%;
+    border-top:1px solid #ccc;
+    background-color:#FFF;
+}
+#title{
+    width:100%;
+    /* background-color:#eef1f6; */
+    /* background-color:#e0ecff; */
+    color:#203360;
+}
+#marks{
+    float:left;
+    overflow:auto;
+    max-width:800px;
+    scrollbar-base-color:#ffeaff;
+}
+
+a.editmark{ font-size:10px;}
+
+.lpanel{
+    /* border-top: 1px solid #ccc; */
+    margin-top: 10px ;
+    padding-left: 5px;
+}
+.panelheader{
+    text-align: center;
+    font-weight: bold;
+    background-color:#e0ecff;
+    margin-bottom: 5px;
+}
+table.markstable { border-collapse:collapse;  min-width:800px; }
+table.markstable tr:hover td{
+    background-color:#eee;
+}
+th.slth { width: 10px; }
+th.nameth { width: 60px; }
+table.markstable th{text-transform:capitalize; border-right:1px solid #ddd;}
+table.markstable tr td {text-align:center; border-right:1px solid #ddd;border-top:1px solid #ddd;}
+input#datafile{width:10px; }
+form#markeditform{
+    font-size: 11px;
+    padding-top: 10px;
+}

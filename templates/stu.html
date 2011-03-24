@@ -1,0 +1,14 @@
+$def with (stuform)
+<script type="text/javascript" src="/static/js/jquery.form.js"></script>
+<script type="text/javascript" src="/static/js/stu.js"></script>
+<div id="sidebar">
+  <div class="lpanel">
+    <div class="panelheader">Select</div>
+    <form id="stuform" name="stuform" action="/stu" method="POST">
+      $:stuform.render()
+    </form>
+  </div>
+</div>
+<div id="main">
+  <div id="stu"></div>
+</div>

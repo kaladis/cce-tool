@@ -1,0 +1,15 @@
+$def with (students)
+<div id="stu"><h2>Students</h2></div>
+<table class="students">
+  <tr>
+    <th class="slth">Sl</th>
+    <th class="nameth">Name</th>
+    <th>Action</th>
+  </tr>
+  $for s in students:
+  <tr>
+    <td>$loop.index</td>
+    <td>$s.name</td>
+    <td><a href="/stuview?id=$s.student_id&sub=Maths">view</a></td>
+  </tr>
+</table>

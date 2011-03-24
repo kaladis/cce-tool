@@ -1,0 +1,22 @@
+$def with (message,upform,reports,title="Upload")
+<div id="sidebar">
+  <br/> 
+  <b>Download</b>
+  <br/>
+  <a href="/static/template.xls">Template XLS</a>
+</div>
+<div id="main">
+  <div id="title"><h2>Upload Marks</h2></div>
+  <form name="uploadform" action="/upload" method="POST" enctype="multipart/form-data">
+    $:upform.render()
+  </form>
+  <div>
+    <ol>
+      $for report in reports:
+      <li>
+        $report.year-$report.std-$report.section-$report.subject
+      </li>
+    </ol>
+  </div>
+  
+</div>

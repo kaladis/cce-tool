@@ -1,0 +1,22 @@
+$def with(field_names,fields,marks,asmt)
+<script type="text/javascript" src="/static/js/marksajax.js"></script>
+<table class="markstable">
+<tr>
+  <thead>
+  <th class="slth">Sl</th>
+  <th class="nameth">Name</th>
+  $for field in fields:
+    <th>$field</th>
+  </head>
+</tr>
+<tbody>
+$for mark in marks:
+  <tr id="$mark.markid">
+  <td>$loop.index</td>
+  <td>$mark['name']</td>
+  $for n in field_names
+     <td class="$n">$mark[n]</td>
+  <td><a class="editmark" href="/markedit?id=$mark['markid']&a=$asmt">Edit</a></td>
+  </tr>
+</tbody>
+</table>

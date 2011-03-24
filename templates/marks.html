@@ -1,0 +1,16 @@
+$def with (message,mform,title="Marks")
+<script type="text/javascript" src="/static/js/jquery.form.js"></script>
+<script type="text/javascript" src="/static/js/marks.js"></script>
+<div id="sidebar">
+  <div class="lpanel">
+    <div class="panelheader">Select</div>
+    <form id="marksform" name="marksform" action="/marks" method="POST">
+      $:mform.render()
+    </form>
+  </div>
+  <div id="editmarkform"></div>
+</div>
+<div id="main">
+  <div id="title"><h2>Marks</h2></div>
+  <div id="marks"></div>
+</div>

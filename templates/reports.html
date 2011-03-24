@@ -1,0 +1,26 @@
+$def with(reports,title=None)
+<script type="text/javascript" src="/static/js/reports.js"></script>
+<div id="sidebar">
+  <div class="lpanel"> </div>
+</div>
+<div id="main">
+  <div id="title"><h2>Reports</h2></div>
+  <div id="reports">
+    <table>
+      <tr>
+        <th>Sl</th>
+        <th>Reports</th>
+        <th>Action</th>
+      </tr>
+      $for r in reports:
+        <tr>
+          <td>$loop.index</td>
+          <td>$r.year-$r.section-$r.subject</td>
+          <td>
+            <a class="action" href="">View</a> 
+            <a class="action del" href="/delmarks?year=$r.year&sec=$r.section&sub=$r.subject">Del</a>
+          </td>
+         </tr>
+      </table>
+  </div>
+</div>
